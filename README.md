@@ -1,0 +1,4 @@
+
+ ` cd YourProjectFolderName`
+ 
+` npm install`
