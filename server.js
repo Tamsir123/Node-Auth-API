@@ -8,10 +8,12 @@ var bodyParser  = require("body-parser");
 var verifyToken = require('./middleware/verifyToken');
 var addNewUser = require('./middleware/addNewUser');
 var userLoginCheck = require('./middleware/userLoginCheck');
-
+var UserOne = require('./middleware/UserOne');
+var updateUser = require('./middleware/updateUser');
+var deleteUser = require('./middleware/deleteUser');
 
 var welcome = require('./middleware/welcome');
- var Utilisateur = require('./middleware/Data/Utilisateur');
+var Utilisateur = require('./middleware/Data/Utilisateur');
 
 
 const port = process.env.PORT || 4400;   
@@ -37,6 +39,9 @@ apiRoutes.use(bodyParser.json());
 
 apiRoutes.use(verifyToken);
 apiRoutes.get('/Utilisateur', Utilisateur);
+apiRoutes.get('/UserOne/:id', UserOne);
+apiRoutes.put('/updateUser/:id', updateUser);
+apiRoutes.delete('/deleteUser/:id', deleteUser);
 
 
 app.use('/api', apiRoutes);
