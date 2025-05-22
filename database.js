@@ -3,11 +3,11 @@ const mysql = require('mysql2');
 
 const connection = mysql.createConnection({
 
-     host: 'localhost',   
+    host: 'localhost',   
     user: 'root',
     password: 'Tam@1#',
     database: 'api2ie',
-
+    port: 4001,
 
     
 });

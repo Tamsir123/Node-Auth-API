@@ -29,6 +29,7 @@ app.use(bodyParser.json());
 app.get('/', welcome);
 app.post('/signup', addNewUser);
 app.post('/userlogin', userLoginCheck);
+app.get('/Utilisateur', Utilisateur);
 
 
 ////  Sous-Routes avec Token
